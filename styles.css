@@ -19,7 +19,7 @@ body {
   line-height: 1.6;
 }
 
-/* UTILIDADES */
+/* UTILIDADES GENERALES */
 .section {
   padding: 5rem 1.5rem;
   max-width: 1100px;
@@ -44,6 +44,7 @@ body {
   margin: 0 auto;
 }
 
+/* BOTONES */
 .btn {
   display: inline-block;
   text-decoration: none;
@@ -56,7 +57,10 @@ body {
   cursor: pointer;
   background-color: transparent;
   color: #f5f5f5;
-  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease,
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
     transform 0.1s ease;
 }
 
@@ -109,6 +113,7 @@ body {
   cursor: pointer;
   font-size: 0.9rem;
   margin-top: 0.75rem;
+  display: inline-block;
 }
 
 /* HEADER / NAVBAR */
@@ -242,15 +247,33 @@ body {
   gap: 1rem;
 }
 
-.hero-tag {
-  border: 1px solid #444;
-  border-radius: 16px;
-  padding: 1.25rem;
-  font-size: 0.9rem;
-  color: #b3b3b3;
+/* Tarjeta de imagen del hero */
+.hero-media {
   align-self: stretch;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
+}
+
+.hero-figure {
+  width: 100%;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid #262626;
+  background: #050505;
+}
+
+.hero-figure img {
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.hero-figure figcaption {
+  padding: 0.75rem 1rem;
+  font-size: 0.85rem;
+  color: #d0d0d0;
+  border-top: 1px solid #262626;
 }
 
 /* SERVICIOS */
@@ -263,6 +286,7 @@ body {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1.75rem;
+  align-items: flex-start; /* evita que se estiren las tarjetas vecinas */
 }
 
 .service-card {
@@ -272,7 +296,50 @@ body {
   background: linear-gradient(135deg, #0b0b0b, #111);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+}
+
+/* checkbox oculto para toggle de detalles */
+.service-toggle {
+  display: none;
+}
+
+/* detalles ocultos por defecto */
+.service-details {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  margin-top: 0;
+  border-top: 1px solid transparent;
+  padding-top: 0;
+  transition:
+    max-height 0.3s ease,
+    opacity 0.25s ease,
+    margin-top 0.25s ease,
+    border-top-color 0.25s ease;
+}
+
+/* cuando el checkbox está activado, mostramos solo ese bloque */
+.service-toggle:checked ~ .service-details {
+  max-height: 1000px;
+  opacity: 1;
+  margin-top: 1rem;
+  border-top-color: #262626;
+}
+
+/* Imagen dentro de los detalles del servicio */
+.service-media {
+  width: 100%;
+  margin: 0 0 0.9rem;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #262626;
+}
+
+.service-media img {
+  display: block;
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
 }
 
 .service-card h3 {
@@ -287,27 +354,31 @@ body {
   color: #bcbcbc;
 }
 
-.service-details {
-  margin-top: 1rem;
-  border-top: 1px solid #262626;
-  padding-top: 1rem;
-  display: none;
-}
-
+/* LISTA DE CADA SERVICIO CON BULLET BONITO */
 .service-details ul {
   list-style: none;
   margin-bottom: 1rem;
+  padding-left: 0;
 }
 
 .service-details li {
   font-size: 0.88rem;
   color: #d4d4d4;
   margin-bottom: 0.35rem;
+  position: relative;
+  padding-left: 1.3rem; /* espacio para el circulito */
 }
 
-/* clase cuando se despliega */
-.service-card.active .service-details {
-  display: block;
+.service-details li::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  border: 2px solid #f5f5f5;
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  opacity: 0.9;
 }
 
 /* CÓMO TRABAJAMOS */
@@ -453,9 +524,10 @@ textarea:focus {
 
 .contact-info h3 {
   text-transform: uppercase;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.30em;
   font-size: 0.9rem;
   margin-bottom: 1rem;
+ 
 }
 
 .contact-info ul {
@@ -464,14 +536,14 @@ textarea:focus {
 }
 
 .contact-info li {
-  font-size: 0.9rem;
-  color: #d0d0d0;
+  font-size: 15px;
+  color: #dadada;
   margin-bottom: 0.35rem;
 }
 
 .contact-info p {
   font-size: 0.9rem;
-  color: #b8b8b8;
+  color: #ebebeb;
 }
 
 /* FOOTER */
@@ -487,6 +559,14 @@ textarea:focus {
 @media (max-width: 960px) {
   .hero {
     grid-template-columns: 1fr;
+  }
+
+  .hero-media {
+    order: 2;
+  }
+
+  .hero-content {
+    order: 1;
   }
 
   .services-grid {
@@ -553,4 +633,29 @@ textarea:focus {
   .section {
     padding: 4rem 1.25rem;
   }
+}
+/* FONDO EXCLUSIVO PARA LA SECCIÓN DE CONTACTO */
+.section-contact {
+  background-image: url("img/contacto-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /* efecto oscurecido elegante */
+  position: relative;
+}
+
+.section-contact::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45); /* oscurece la imagen para leer los textos */
+  backdrop-filter: blur(1px);
+  z-index: 0;
+}
+
+/* Asegura que el contenido quede arriba de la capa oscura */
+.section-contact * {
+  position: relative;
+  z-index: 1;
 }

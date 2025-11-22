@@ -38,7 +38,7 @@
     <section class="hero">
       <div class="hero-content">
         <h1>Servicio integral de mantenimiento</h1>
-        <h2>para edificios, cocheras y galpones</h2>
+        <h2>para departamentos, cocheras y galpones</h2>
         <p>
           En <strong>LYL MANTENIMINETO</strong> coordinamos y ejecutamos
           todos los trabajos de mantenimiento edilicio con un solo equipo,
@@ -49,8 +49,16 @@
           <a href="#contacto" class="btn btn-secondary">Solicitar presupuesto</a>
         </div>
       </div>
-      <div class="hero-tag">
-        <p>Mantenimiento 360° para consorcios y empresas</p>
+
+      <!-- TARJETA CON IMAGEN -->
+      <div class="hero-media">
+        <figure class="hero-figure">
+          <img
+            src="img/hero-mantenimiento.jpg"
+            alt="Mantenimiento de edificios, cocheras y galpones"
+          />
+          <figcaption>Mantenimiento 360° para consorcios y empresas</figcaption>
+        </figure>
       </div>
     </section>
   </header>
@@ -59,22 +67,29 @@
   <main>
     <section id="servicios" class="section section-services">
       <div class="section-header">
-        <h2>Servicios</h2>
+        <h2>SERVICIOS</h2>
         <p>
-          Cubrimos todas las necesidades de mantenimiento para
-          edificios, cocheras, galpones y consorcios.
+          Cubrimos todas las necesidades de mantenimiento para edificios, cocheras,
+          galpones y consorcios.
         </p>
       </div>
 
       <div class="services-grid">
-        <!-- Pintura -->
-        <article class="service-card" data-service>
+        <!-- PINTURA -->
+        <article class="service-card">
           <h3>Pintura</h3>
           <p class="service-summary">
             Trabajos de pintura interior y exterior con terminaciones prolijas.
           </p>
-          <button class="btn-link" type="button">Ver detalles</button>
+
+          <!-- toggle solo CSS -->
+          <input type="checkbox" id="servicio-pintura" class="service-toggle" />
+          <label for="servicio-pintura" class="btn-link">Ver detalles</label>
+
           <div class="service-details">
+            <div class="service-media">
+              <img src="img/servicio-pintura.jpg" alt="Servicio de pintura en edificios" />
+            </div>
             <ul>
               <li>Interior y exterior</li>
               <li>Preparación de superficies</li>
@@ -86,14 +101,20 @@
           </div>
         </article>
 
-        <!-- Destapación -->
-        <article class="service-card" data-service>
+        <!-- DESTAPACIÓN -->
+        <article class="service-card">
           <h3>Destapación</h3>
           <p class="service-summary">
             Destapaciones rápidas y seguras para consorcios y empresas.
           </p>
-          <button class="btn-link" type="button">Ver detalles</button>
+
+          <input type="checkbox" id="servicio-destapacion" class="service-toggle" />
+          <label for="servicio-destapacion" class="btn-link">Ver detalles</label>
+
           <div class="service-details">
+            <div class="service-media">
+              <img src="img/servicio-destapacion.jpg" alt="Destapación de cañerías" />
+            </div>
             <ul>
               <li>Cañerías de agua</li>
               <li>Pluviales y cloacales</li>
@@ -105,14 +126,20 @@
           </div>
         </article>
 
-        <!-- Plomería -->
-        <article class="service-card" data-service>
+        <!-- PLOMERÍA -->
+        <article class="service-card">
           <h3>Plomería</h3>
           <p class="service-summary">
             Mantenimiento y reparación completa de instalaciones de agua.
           </p>
-          <button class="btn-link" type="button">Ver detalles</button>
+
+          <input type="checkbox" id="servicio-plomeria" class="service-toggle" />
+          <label for="servicio-plomeria" class="btn-link">Ver detalles</label>
+
           <div class="service-details">
+            <div class="service-media">
+              <img src="img/servicio-plomeria.jpg" alt="Plomería para consorcios" />
+            </div>
             <ul>
               <li>Reparación y cambio de cañerías</li>
               <li>Columnas pluviales y montantes</li>
@@ -124,14 +151,20 @@
           </div>
         </article>
 
-        <!-- Albañilería -->
-        <article class="service-card" data-service>
+        <!-- ALBAÑILERÍA -->
+        <article class="service-card">
           <h3>Albañilería</h3>
           <p class="service-summary">
             Refacciones y obras menores para mantener el edificio al día.
           </p>
-          <button class="btn-link" type="button">Ver detalles</button>
+
+          <input type="checkbox" id="servicio-albanileria" class="service-toggle" />
+          <label for="servicio-albanileria" class="btn-link">Ver detalles</label>
+
           <div class="service-details">
+            <div class="service-media">
+              <img src="img/servicio-albanileria.jpg" alt="Trabajos de albañilería" />
+            </div>
             <ul>
               <li>Refacciones en general</li>
               <li>Revoques y reparaciones</li>
@@ -143,14 +176,20 @@
           </div>
         </article>
 
-        <!-- Electricidad -->
-        <article class="service-card" data-service>
+        <!-- ELECTRICIDAD -->
+        <article class="service-card">
           <h3>Electricidad</h3>
           <p class="service-summary">
             Instalaciones eléctricas seguras y acorde a normas vigentes.
           </p>
-          <button class="btn-link" type="button">Ver detalles</button>
+
+          <input type="checkbox" id="servicio-electricidad" class="service-toggle" />
+          <label for="servicio-electricidad" class="btn-link">Ver detalles</label>
+
           <div class="service-details">
+            <div class="service-media">
+              <img src="img/servicio-electricidad.jpg" alt="Instalaciones eléctricas" />
+            </div>
             <ul>
               <li>Mantenimiento eléctrico general</li>
               <li>Luces de emergencia</li>
@@ -162,14 +201,20 @@
           </div>
         </article>
 
-        <!-- Otros -->
-        <article class="service-card" data-service>
+        <!-- OTROS -->
+        <article class="service-card">
           <h3>Otros servicios</h3>
           <p class="service-summary">
             Soluciones complementarias para cubrir todas las necesidades del consorcio.
           </p>
-          <button class="btn-link" type="button">Ver detalles</button>
+
+          <input type="checkbox" id="servicio-otros" class="service-toggle" />
+          <label for="servicio-otros" class="btn-link">Ver detalles</label>
+
           <div class="service-details">
+            <div class="service-media">
+              <img src="img/servicio-otros.jpg" alt="Otros servicios de mantenimiento" />
+            </div>
             <ul>
               <li>Cerrajería</li>
               <li>Bombas de agua y tanques</li>
@@ -186,7 +231,7 @@
     <!-- CÓMO TRABAJAMOS -->
     <section id="como-trabajamos" class="section section-process">
       <div class="section-header">
-        <h2>Cómo trabajamos</h2>
+        <h2>CÓMO TRABAJAMOS</h2>
         <p>
           Un proceso claro para que administradores, encargados y propietarios
           sepan siempre en qué etapa está cada trabajo.
@@ -266,78 +311,79 @@
       </div>
     </section>
 
-    <!-- CONTACTO -->
-    <section id="contacto" class="section section-contact">
-      <div class="section-header">
-        <h2>Contacto</h2>
-        <p>Completa el formulario y te enviamos un presupuesto sin cargo.</p>
+   <!-- CONTACTO -->
+<section id="contacto" class="section section-contact">
+  <div class="section-header">
+    <h2>CONTACTO</h2>
+    <p>Completa el formulario y te enviamos un presupuesto sin cargo.</p>
+  </div>
+
+  <div class="contact-grid">
+    <form class="contact-form">
+      <div class="form-group">
+        <label for="nombre">Nombre y apellido *</label>
+        <input type="text" id="nombre" name="nombre" required />
       </div>
 
-      <div class="contact-grid">
-        <form class="contact-form">
-          <div class="form-group">
-            <label for="nombre">Nombre y apellido *</label>
-            <input type="text" id="nombre" name="nombre" required />
-          </div>
-
-          <div class="form-group">
-            <label for="email">Email *</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              required
-              placeholder="tuemail@ejemplo.com"
-            />
-          </div>
-
-          <div class="form-group">
-            <label for="telefono">Teléfono</label>
-            <input type="tel" id="telefono" name="telefono" />
-          </div>
-
-          <div class="form-group">
-            <label for="servicio">Servicio</label>
-            <select id="servicio" name="servicio">
-              <option value="">Seleccionar</option>
-              <option value="pintura">Pintura</option>
-              <option value="albañileria">Albañilería</option>
-              <option value="destapacion">Destapación</option>
-              <option value="plomeria">Plomería</option>
-              <option value="electricidad">Electricidad</option>
-              <option value="otros">Otros</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label for="mensaje">Detalle del trabajo *</label>
-            <textarea
-              id="mensaje"
-              name="mensaje"
-              rows="4"
-              required
-            ></textarea>
-          </div>
-
-          <button type="submit" class="btn btn-primary btn-full">
-            Enviar consulta
-          </button>
-        </form>
-
-        <div class="contact-info">
-          <h3>Datos de contacto</h3>
-          <ul>
-            <li><strong>Email:</strong> contacto@lylmantenimiento.com</li>
-            <li><strong>Teléfono:</strong> 11 0000-0000</li>
-            <li><strong>Zona de trabajo:</strong> CABA y Gran Buenos Aires</li>
-          </ul>
-          <p>
-            También podemos armar abonos mensuales de mantenimiento
-            según las necesidades de tu edificio o consorcio.
-          </p>
-        </div>
+      <div class="form-group">
+        <label for="email">Email *</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+          placeholder="tuemail@ejemplo.com"
+        />
       </div>
-    </section>
+
+      <div class="form-group">
+        <label for="telefono">Teléfono</label>
+        <input type="tel" id="telefono" name="telefono" />
+      </div>
+
+      <div class="form-group">
+        <label for="servicio">Servicio</label>
+        <select id="servicio" name="servicio">
+          <option value="">Seleccionar</option>
+          <option value="pintura">Pintura</option>
+          <option value="albañileria">Albañilería</option>
+          <option value="destapacion">Destapación</option>
+          <option value="plomeria">Plomería</option>
+          <option value="electricidad">Electricidad</option>
+          <option value="otros">Otros</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="mensaje">Detalle del trabajo *</label>
+        <textarea
+          id="mensaje"
+          name="mensaje"
+          rows="4"
+          required
+        ></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-full">
+        Enviar consulta
+      </button>
+    </form>
+
+    <div class="contact-info">
+      <h3>Datos de contacto</h3>
+      <ul>
+        <li><strong>Email:</strong> contacto@lylmantenimiento.com</li>
+        <li><strong>Teléfono:</strong> 11 0000-0000</li>
+        <li><strong>Zona de trabajo:</strong> CABA y Gran Buenos Aires</li>
+      </ul>
+      <p>
+        También podemos armar abonos mensuales de mantenimiento
+        según las necesidades de tu edificio o consorcio.
+      </p>
+    </div>
+  </div>
+</section>
+
   </main>
 
   <!-- FOOTER -->
