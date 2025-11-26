@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>LYL MANTENIMINETO - Mantenimiento de edificios y consorcios</title>
+  <title>L&L Mantenimientos Integrales - Mantenimiento de edificios y consorcios</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -11,8 +11,12 @@
   <header class="header" id="inicio">
     <nav class="navbar">
       <div class="logo">
-        <span class="logo-main">L&L Soluciones Integrales</span>
-      
+        <!-- LOGO SOLO IMAGEN (CAMBIÁ LA RUTA SI QUERÉS) -->
+        <img
+          src="img/logo_3.png"
+          alt="L&L Mantenimientos Integrales"
+          class="logo-image"
+        />
       </div>
 
       <input type="checkbox" id="nav-toggle" class="nav-toggle" />
@@ -40,8 +44,8 @@
         <h1>Servicio integral de mantenimiento</h1>
         <h2>para departamentos, cocheras y galpones</h2>
         <p>
-          En <strong>LYL MANTENIMINETO</strong> noos ocupamos de hacer relevamients e informes de lsol espacion. Abarcamos
-          departamentos,quintas,galpones y ccheras.
+          En <strong>L&L Mantenimientos Integrales</strong> nos ocupamos de hacer relevamientos e informes
+          de los espacios. Abarcamos departamentos, quintas, galpones y cocheras.
         </p>
         <div class="hero-actions">
           <a href="#servicios" class="btn btn-primary">Ver servicios</a>
@@ -52,6 +56,7 @@
       <!-- TARJETA CON IMAGEN -->
       <div class="hero-media">
         <figure class="hero-figure">
+          <!-- podés cambiar esta ruta por la imagen que generamos -->
           <img
             src="img/hero-mantenimiento.jpg"
             alt="Mantenimiento de edificios, cocheras y galpones"
@@ -81,7 +86,6 @@
             Trabajos de pintura interior y exterior con terminaciones prolijas.
           </p>
 
-          <!-- toggle solo CSS -->
           <input type="checkbox" id="servicio-pintura" class="service-toggle" />
           <label for="servicio-pintura" class="btn-link">Ver detalles</label>
 
@@ -187,7 +191,7 @@
 
           <div class="service-details">
             <div class="service-media">
-              <img src="img/servicio-electricidad.jpg" alt="Instalaciones eléctricas" />
+              <img src="img/servicio-electricidad.png" alt="Instalaciones eléctricas" />
             </div>
             <ul>
               <li>Mantenimiento eléctrico general</li>
@@ -278,7 +282,7 @@
         <div class="about-text">
           <h2>¿Quiénes somos?</h2>
           <p>
-            <strong>LYL MANTENIMINETO</strong> es una empresa dedicada al
+            <strong>L&L Mantenimientos Integrales</strong> es una empresa dedicada al
             mantenimiento integral de edificios, consorcios, cocheras y
             galpones. Nuestro foco está en resolver los problemas diarios
             de la forma más simple para el administrador y los propietarios.
@@ -310,84 +314,83 @@
       </div>
     </section>
 
-   <!-- CONTACTO -->
-<section id="contacto" class="section section-contact">
-  <div class="section-header">
-    <h2>CONTACTO</h2>
-    <p>Completa el formulario y te enviamos un presupuesto sin cargo.</p>
-  </div>
-
-  <div class="contact-grid">
-    <form class="contact-form">
-      <div class="form-group">
-        <label for="nombre">Nombre y apellido *</label>
-        <input type="text" id="nombre" name="nombre" required />
+    <!-- CONTACTO -->
+    <section id="contacto" class="section section-contact">
+      <div class="section-header">
+        <h2>CONTACTO</h2>
+        <p>Completa el formulario y te enviamos un presupuesto sin cargo.</p>
       </div>
 
-      <div class="form-group">
-        <label for="email">Email *</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          required
-          placeholder="tuemail@ejemplo.com"
-        />
+      <div class="contact-grid">
+        <form class="contact-form">
+          <div class="form-group">
+            <label for="nombre">Nombre y apellido *</label>
+            <input type="text" id="nombre" name="nombre" required />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              placeholder="tuemail@ejemplo.com"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="telefono">Teléfono</label>
+            <input type="tel" id="telefono" name="telefono" />
+          </div>
+
+          <div class="form-group">
+            <label for="servicio">Servicio</label>
+            <select id="servicio" name="servicio">
+              <option value="">Seleccionar</option>
+              <option value="pintura">Pintura</option>
+              <option value="albañileria">Albañilería</option>
+              <option value="destapacion">Destapación</option>
+              <option value="plomeria">Plomería</option>
+              <option value="electricidad">Electricidad</option>
+              <option value="otros">Otros</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="mensaje">Detalle del trabajo *</label>
+            <textarea
+              id="mensaje"
+              name="mensaje"
+              rows="4"
+              required
+            ></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-full">
+            Enviar consulta
+          </button>
+        </form>
+
+        <div class="contact-info">
+          <h3>Datos de contacto</h3>
+          <ul>
+            <li><strong>Email:</strong> contacto@lylmantenimiento.com</li>
+            <li><strong>Teléfono:</strong> 11 0000-0000</li>
+            <li><strong>Zona de trabajo:</strong> CABA y Gran Buenos Aires</li>
+          </ul>
+          <p>
+            También podemos armar abonos mensuales de mantenimiento
+            según las necesidades de tu edificio o consorcio.
+          </p>
+        </div>
       </div>
-
-      <div class="form-group">
-        <label for="telefono">Teléfono</label>
-        <input type="tel" id="telefono" name="telefono" />
-      </div>
-
-      <div class="form-group">
-        <label for="servicio">Servicio</label>
-        <select id="servicio" name="servicio">
-          <option value="">Seleccionar</option>
-          <option value="pintura">Pintura</option>
-          <option value="albañileria">Albañilería</option>
-          <option value="destapacion">Destapación</option>
-          <option value="plomeria">Plomería</option>
-          <option value="electricidad">Electricidad</option>
-          <option value="otros">Otros</option>
-        </select>
-      </div>
-
-      <div class="form-group">
-        <label for="mensaje">Detalle del trabajo *</label>
-        <textarea
-          id="mensaje"
-          name="mensaje"
-          rows="4"
-          required
-        ></textarea>
-      </div>
-
-      <button type="submit" class="btn btn-primary btn-full">
-        Enviar consulta
-      </button>
-    </form>
-
-    <div class="contact-info">
-      <h3>Datos de contacto</h3>
-      <ul>
-        <li><strong>Email:</strong> contacto@lylmantenimiento.com</li>
-        <li><strong>Teléfono:</strong> 11 0000-0000</li>
-        <li><strong>Zona de trabajo:</strong> CABA y Gran Buenos Aires</li>
-      </ul>
-      <p>
-        También podemos armar abonos mensuales de mantenimiento
-        según las necesidades de tu edificio o consorcio.
-      </p>
-    </div>
-  </div>
-</section>
-
+    </section>
   </main>
 
   <!-- FOOTER -->
   <footer class="footer">
-    <p>LYL MANTENIMINETO &copy; 2025 - Mantenimiento integral de edificios</p>
+    <p>L&L Mantenimientos Integrales &copy; 2025 - Mantenimiento integral de edificios</p>
   </footer>
 
   <script src="script.js"></script>
