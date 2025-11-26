@@ -636,7 +636,7 @@ textarea:focus {
 }
 /* FONDO EXCLUSIVO PARA LA SECCIÓN DE CONTACTO */
 .section-contact {
-  background-image: url("img/contacto-bg.jpg");
+  background-image: url("img/contacto_2.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
