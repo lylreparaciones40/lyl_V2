@@ -688,3 +688,41 @@ textarea:focus {
     padding: 4rem 1.25rem;
   }
 }
+
+
+
+/* ===== PÁGINA DE GRACIAS ===== */
+
+.gracias-body {
+  min-height: 100vh;            /* ocupa todo el alto de la pantalla */
+  display: flex;                /* para centrar con flexbox */
+  justify-content: center;      /* centrado horizontal */
+  align-items: center;          /* centrado vertical */
+  background: #f4f5f7;          /* fondo gris clarito */
+}
+
+.gracias-container {
+  background: #ffffff;          /* cuadrado blanco */
+  padding: 2.5rem 2rem;         /* espacio interno */
+  border-radius: 16px;          /* esquinas redondeadas */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12); /* sombrita linda */
+  max-width: 480px;
+  width: 90%;
+  text-align: center;           /* texto centrado */
+}
+
+.gracias-container h1 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.gracias-container p {
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+/* separo un poco el botón del texto */
+.gracias-container .btn {
+  display: inline-block;
+  margin-top: 0.5rem;
+}
